@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link REL="STYLESHEET" TYPE="text/css" HREF="tema2.css">
+
+    <script type="text/javascript" src="tema2.js"></script>
+
+
+</head>
+<body>
+    <button disabled class="p1"> <h5 class="nume">Erik Robert MATHE LESZAY</h5></button>
+
+    <p class="email">gunnbottpentakill@gmail.com</p>
+
+    <div class="myDiv2">
+        <h2 class="sal1">Structura retelei personale si accesul la internet</h2>
+        <p class="centerr"><img src="capture.jpg" /> </p>
+        <h2 class="sal1">Caracteristicile conexiunii la rete</h2>
+        <ul class="right">
+            <li>Adresa MAC: 2C-27-D7-40-45-B7</li>
+            <li>Adresa IP: 188.24.19.241</li>
+            <li>825.75Mbps Download Rate</li>
+            <li>673.90Mbps Upload Rate</li>
+        </ul>
+    </div>
+    <div id="first">
+        <button class="btn" onclick="sal()"><h2 class="sal1">Utilizarea resurselor (slideshow)</h2></button><br />
+        <img class="sal2" src="cpu.png" /> <img class="sal2" src="memory.png"><img class="sal2" src="disk.png">
+    </div>
+    <div id="second" class="nothing">
+        <h2 class="sal1">Utilizarea resurselor (slideshow)</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <p class="centerr"><img src="cpu.png" class="y"></p>
+
+</div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <p class="centerr"><img src="memory.png" class="y"></p>
+
+</div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <p class="centerr"><img src="disk.png" class="y"></p>
+
+</div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <h2 class="sal1">Specificatii tehnice ale statiei principale de lucru</h2>
+    <table class="tabel1">
+        <tr>
+            <th>Denumire componenta</th>
+            <th>Producător</th>
+            <th>Parametri</th>
+        </tr>
+        <tr>
+            <td>AMD Radeon (TM) R9 380Series</td>
+            <td>AMD</td>
+            <td>CurrentBitsPerPixel : 32</td>
+        </tr>
+        <tr>
+            <td>Intel(R) Core(TM) i5-7400 CPU @3.00GHz</td>
+            <td>Intel</td>
+            <td>MaxClockSpeed=3000</td>
+        </tr>
+        <tr>
+            <td>Physical Memory</td>
+            <td>CT8G4DFS8213.C8FAD1</td>
+            <td>Crucial</td>
+        </tr>
+    </table>
+    <script>
+        let slideIndex = 0;
+    showSlides();
+        function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // nu merge numa dacal pun aici,nu mere in js nu stiu de ce
+}
+  
+
+
+    </script>
+</body>
+</html>
